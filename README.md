@@ -4,6 +4,8 @@
 
 `mqtt-listener` is a ReactJS application used to display messages published over a MQTT broker over websockets.
 
+![Screenshot](https://raw.githubusercontent.com/rsaikali/mqtt-listener/master/screenshot.png)
+
 ## How to use
 
 `mqtt-listener` can be used as a standalone ReactJS application or as a Docker container.
