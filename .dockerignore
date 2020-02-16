@@ -1,0 +1,6 @@
+.dockerignore
+.gitignore
+node_modules
+npm-debug.log
+docker_build.sh
+docker_run.sh
