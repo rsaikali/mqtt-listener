@@ -4,7 +4,9 @@
 
 `mqtt-listener` is a ReactJS application used to display messages published over a MQTT broker over websockets.
 
-![Screenshot](https://raw.githubusercontent.com/rsaikali/mqtt-listener/master/screenshot.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/rsaikali/mqtt-listener/master/screenshot.png" width="600">
+</p>
 
 ## How to use
 
