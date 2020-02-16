@@ -12,7 +12,7 @@ jobs:
         uses: ilteoood/docker_buildx@master
         with:
           imageName: rsaikali/mqtt-listener
-          platform: linux/arm/v7
+          platform: linux/amd64,linux/arm/v7
           dockerHubUser: ${{ secrets.DOCKER_HUB_LOGIN }}
           dockerHubPassword: ${{ secrets.DOCKER_HUB_PASSWORD }}
           publish: true
