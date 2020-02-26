@@ -28,4 +28,4 @@ COPY --from=builder /app/docker-entrypoint.sh /app/docker-entrypoint.sh
 
 EXPOSE 80
 
-ENTRYPOINT "/app/docker-entrypoint.sh"
+ENTRYPOINT /app/docker-entrypoint.sh
