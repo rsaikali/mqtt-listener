@@ -2,15 +2,15 @@
 # Build environment
 FROM node:alpine as builder
 
-WORKDIR /app
+WORKDIR /opt
 
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH /opt/node_modules/.bin:$PATH
 
-COPY package.json /app/package.json
+COPY package.json /opt/package.json
 
 RUN npm install --silent
 
-COPY . /app
+COPY . /opt
 
 RUN npm run build
 
@@ -21,11 +21,11 @@ FROM nginx:alpine
 ENV MQTT_HOST=127.0.0.1
 ENV MQTT_PORT=1884
 
-WORKDIR /app
+WORKDIR /opt
 
-COPY --from=builder /app/build /usr/share/nginx/html
-COPY --from=builder /app/docker-entrypoint.sh /app/docker-entrypoint.sh
+COPY --from=builder /opt/build /usr/share/nginx/html
+COPY --from=builder /opt/docker-entrypoint.sh /opt/docker-entrypoint.sh
 
 EXPOSE 80
 
-ENTRYPOINT /app/docker-entrypoint.sh
+ENTRYPOINT ["/opt/docker-entrypoint.sh"]
