@@ -1,5 +1,9 @@
-.dockerignore
+.git
 .gitignore
+.github
+.dockerignore
 .DS_Store
+.vscode
+Dockerfile
 node_modules
 npm-debug.log
